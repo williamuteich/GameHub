@@ -6,7 +6,6 @@ import { GameCards } from "@/components/gameCards";
 async function getData(title: string) {
     try{
         const decodeTitle = decodeURI(title)
-        console.log("aquiiii", decodeTitle)
         const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&title=${decodeTitle}`)
         return res.json();
     }catch(error){
@@ -14,8 +13,6 @@ async function getData(title: string) {
         return [];
     }
 }
-
-
 
 export default async function Search({params: {title}} : {params: {title: string}}){
     const games: GameProps[]  = await getData(title);
