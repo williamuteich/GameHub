@@ -14,7 +14,7 @@ export function Header() {
                     <Link href="/">
                         Games
                     </Link>
-                    <Link href="/">
+                    <Link href="/profile">
                         Perfil
                     </Link>
                 </nav>
